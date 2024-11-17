@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autor</title>
+</head>
+<body>
+    <h1>Sobre o Autor</h1>
+    <p><strong>Nome:</strong> {{ autor.nome }}</p>
+    <h2>Formações Acadêmicas</h2>
+    <ul>
+        {% for formacao in autor.formacoes %}
+        <li>{{ formacao.curso }} - {{ formacao.instituicao }} ({{ formacao.ano }})</li>
+        {% endfor %}
+    </ul>
+    <h2>Experiências Profissionais</h2>
+    <ul>
+        {% for experiencia in autor.experiencias %}
+        <li>{{ experiencia.funcao }} - {{ experiencia.empresa }} ({{ experiencia.ano }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
